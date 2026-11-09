@@ -282,3 +282,23 @@ h1 em, h2 em, .contact-copy h1 em { color: var(--green); font-style: normal; }
   .work-photo { min-height: 280px; }
   .gallery-photo { min-height: 170px; }
 }
+
+
+/* Layout refinements */
+.hero { grid-template-columns: 1fr; min-height: 0; padding-top: 48px; }
+.hero-copy { max-width: 820px; }
+.contact-layout { grid-template-columns: 1fr; min-height: 0; }
+.contact-copy { max-width: 760px; }
+.bottom-nav { width: min(calc(100% - 32px), 650px); }
+.nav-item { white-space: nowrap; }
+.nav-item:nth-child(2) { flex: 1.25; }
+@media (max-width: 700px) {
+  .hero { padding-top: 25px; }
+  .bottom-nav { width: calc(100% - 24px); }
+  .nav-item { font-size: 8.5px; padding-left: 3px; padding-right: 3px; }
+  .nav-item:nth-child(2) { flex: 1.2; }
+}
+@media (max-width: 390px) {
+  .bottom-nav { width: calc(100% - 12px); gap: 0; padding: 5px 3px; }
+  .nav-item { font-size: 7.5px; padding: 7px 1px; }
+}
