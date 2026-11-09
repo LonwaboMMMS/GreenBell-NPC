@@ -210,3 +210,75 @@ h1 em, h2 em, .contact-copy h1 em { color: var(--green); font-style: normal; }
   .hero-actions { gap: 15px; }
   .button { padding: 12px; }
 }
+
+
+/* Uploaded Green Bell brand and photography */
+.brand-logo {
+  display: block;
+  width: auto;
+  height: 56px;
+  max-width: 220px;
+  object-fit: contain;
+  object-position: left center;
+}
+.hero-photo, .work-photo, .contact-photo {
+  position: relative;
+  overflow: hidden;
+  background: var(--sand-light);
+}
+.hero-photo > img, .work-photo > img, .contact-photo > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-photo > img { position: absolute; inset: 0; }
+.hero-photo::after {
+  content: "";
+  position: absolute;
+  inset: 45% 0 0;
+  background: linear-gradient(transparent, rgba(20,35,12,.58));
+  pointer-events: none;
+}
+.hero-photo .art-caption, .hero-photo .art-number {
+  z-index: 2;
+  color: #fff;
+}
+.work-photo { min-height: 360px; }
+.work-photo > img { position: absolute; inset: 0; }
+.contact-photo { width: 100%; max-width: 390px; border-radius: 48% 48% 6px 6px; }
+.contact-photo > img { aspect-ratio: 4 / 4.5; }
+.contact-photo > p { margin: 17px 0 0; color: var(--muted); font: 600 13px/1.5 Manrope,sans-serif; text-align: center; }
+.gallery-photo {
+  position: relative;
+  min-height: 190px;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 5px;
+  background: var(--sand-light);
+}
+.gallery-photo.gallery-large { grid-row: span 2; }
+.gallery-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  object-fit: cover;
+  transition: transform .45s ease;
+}
+.gallery-photo:hover img { transform: scale(1.035); }
+.gallery-photo figcaption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 35px 18px 15px;
+  color: white;
+  font: 700 13px Manrope,sans-serif;
+  background: linear-gradient(transparent, rgba(0,0,0,.62));
+}
+@media (max-width: 700px) {
+  .brand-logo { height: 48px; max-width: 185px; }
+  .work-photo { min-height: 280px; }
+  .gallery-photo { min-height: 170px; }
+}
