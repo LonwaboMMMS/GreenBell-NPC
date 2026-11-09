@@ -1,0 +1,55 @@
+/* GreenBell NPC — main stylesheet */
+:root {
+  color-scheme: light;
+  --green: #1f6b45;
+  --green-dark: #164d32;
+  --cream: #f7f8f2;
+  --text: #202820;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--cream);
+}
+
+header {
+  padding: 2rem clamp(1rem, 5vw, 4rem);
+  color: white;
+  background: var(--green);
+}
+
+header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+}
+
+main {
+  width: min(100% - 2rem, 900px);
+  margin: 3rem auto;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 8px 28px rgb(0 0 0 / 6%);
+}
+
+button {
+  padding: 0.75rem 1.1rem;
+  border: 0;
+  border-radius: 8px;
+  color: white;
+  background: var(--green);
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--green-dark);
+}
